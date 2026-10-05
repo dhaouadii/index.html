@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YourBrand – Your home internet, anywhere in Europe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--yellow:#ffd84d;--green:#13236b;--lime:#9fd8ff;--teal:#27c3d6;--coral:#ff7a59;--sand:#fff0cf;--ink:#13236b;--white:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--white);color:var(--ink);font:18px/1.55 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{margin:0 0 .4em;font-weight:800;line-height:.95;letter-spacing:-.035em}
+h1{font-size:clamp(3.1rem,9.5vw,7.6rem)}
+h2{font-size:clamp(2.3rem,6vw,4.6rem)}
+h3{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1}
+p{margin:0 0 1em;max-width:58ch}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;background:var(--green);color:#fff;padding:18px 34px;border-radius:999px;font-weight:800;font-size:1.1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:scale(1.05) rotate(-1deg)}
+.btn.lime{background:var(--lime);color:var(--green)}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 3px var(--green)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:4px solid var(--teal);outline-offset:3px}
+nav.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:12px}
+.logo{font-weight:800;font-size:1.7rem;letter-spacing:-.04em}
+nav.top .links{display:flex;gap:26px;font-weight:600}
+nav.top .links a{text-decoration:none}
+.btn.sm{padding:12px 24px;font-size:1rem}
+@media (max-width:760px){nav.top .links{display:none}}
+/* hero */
+.hero{background:var(--yellow);border-radius:0 0 56px 56px;position:relative;z-index:1;overflow:hidden;isolation:isolate}
+.hero .grid{display:grid;grid-template-columns:1.15fr 1fr;gap:30px;align-items:center;padding:30px 0 90px}
+.hero p.lead{font-size:1.35rem;font-weight:600;margin:22px 0 30px;max-width:30ch}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.stats span{background:#fff;border-radius:999px;padding:8px 18px;font-weight:600;font-size:.95rem}
+.sun{position:absolute;z-index:-1;right:-110px;top:-110px;width:420px;height:420px;border-radius:50%;background:#fff3a8;box-shadow:0 0 0 40px rgba(255,255,255,.35),0 0 0 90px rgba(255,255,255,.2)}
+.stage{position:relative;background:#fff;border:4px solid var(--green);border-radius:36px;padding:30px 22px 26px;box-shadow:10px 10px 0 var(--green);transform:rotate(2deg)}
+.devs{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;text-align:center;gap:6px}
+.dev{border-radius:22px;padding:22px 8px;font-weight:800;line-height:1.1}
+.dev.h{background:var(--green);color:var(--lime)}
+.dev.t{background:var(--teal)}
+.dev small{display:block;font-weight:600;opacity:.8;margin-top:4px}
+.dash{border-top:4px dashed var(--green)}
+.ip{margin:20px auto 0;width:max-content;max-width:100%;background:var(--lime);border-radius:999px;padding:8px 20px;font:800 1rem ui-monospace,Menlo,monospace}
+.chip{position:absolute;background:var(--coral);color:var(--green);font-weight:800;border-radius:999px;padding:8px 16px;font-size:.95rem;box-shadow:3px 3px 0 var(--green);animation:float 4s ease-in-out infinite}
+.chip.a{top:-20px;right:14px;transform:rotate(6deg)}
+.chip.b{bottom:-20px;left:-14px;background:var(--lime);transform:rotate(-5deg);animation-delay:-1.5s}
+.chip.c{bottom:34px;right:-18px;background:var(--teal);transform:rotate(4deg);animation-delay:-2.5s}
+@keyframes float{50%{translate:0 -8px}}
+@media (max-width:860px){.hero .grid{grid-template-columns:1fr}.stage{transform:none;margin:16px 6px 0}.chip.c{right:-4px}}
+/* marquee */
+.marq{position:relative;z-index:0;background:var(--green);color:var(--yellow);overflow:hidden;white-space:nowrap;padding:18px 0;margin-top:-56px;padding-top:74px}
+.marq div{display:inline-block;animation:scroll 40s linear infinite;font-weight:800;font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:-.02em}
+.marq i{font-style:normal;color:var(--lime);margin:0 .6em}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:96px 0}
+.head{margin-bottom:44px}
+.head p{font-size:1.2rem;font-weight:600}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.cell{border-radius:36px;padding:32px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
+.cell p{margin:12px 0 0;font-weight:600}
+.cell .ico{font-size:3rem;line-height:1}
+.s4{grid-column:span 4}.s2{grid-column:span 2}.s6{grid-column:span 6}
+@media (max-width:860px){.s4,.s2,.s6{grid-column:span 6}.cell{min-height:0;gap:20px}}
+/* calc */
+.calc{background:var(--lime);border-radius:56px;padding:64px 0}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch}
+.panel{background:#fff;border-radius:32px;padding:30px;border:4px solid var(--green)}
+.panel label{display:block;font-weight:800;margin:0 0 6px}
+.panel input[type=number]{width:100%;font-weight:800;font-size:1.6rem;font-family:inherit;padding:10px 16px;border:3px solid var(--green);border-radius:16px;margin-bottom:20px}
+.panel input[type=range]{width:100%;accent-color:var(--green);margin-bottom:6px}
+.out{background:var(--green);color:#fff;border-radius:32px;padding:30px;display:flex;flex-direction:column;justify-content:center}
+.out .row{display:flex;justify-content:space-between;font-weight:600;border-bottom:2px solid rgba(255,255,255,.2);padding:10px 0}
+.out .big{font-weight:800;font-size:clamp(3.2rem,8vw,5.6rem);letter-spacing:-.04em;color:var(--yellow);line-height:1;margin-top:18px}
+.out small{opacity:.8}
+@media (max-width:860px){.cgrid{grid-template-columns:1fr}}
+/* compare */
+.tw{overflow-x:auto}
+table{width:100%;min-width:560px;border-collapse:separate;border-spacing:0;font-weight:600}
+th,td{padding:20px 22px;text-align:left;border-bottom:2px solid #e4e9f6}
+th{font-weight:800;font-size:1.2rem}
+td:first-child{font-weight:800}
+th:last-child,td:last-child{background:var(--yellow);border-bottom-color:#f1c92e}
+th:last-child{border-radius:24px 24px 0 0}
+tr:last-child td:last-child{border-radius:0 0 24px 24px}
+.no{opacity:.6}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{border-radius:36px;padding:32px;position:relative;overflow:hidden;min-height:330px}
+.step b{display:block;font-size:7rem;line-height:.9;font-weight:800;letter-spacing:-.06em;opacity:.9}
+.step h3{margin-top:24px}
+@media (max-width:860px){.steps{grid-template-columns:1fr}.step{min-height:0}}
+/* offer */
+.offer{background:var(--teal);border-radius:56px;padding:72px 0;position:relative;overflow:hidden}
+.ogrid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.ogrid ul{list-style:none;padding:0;margin:20px 0 0;font-weight:600}
+.ogrid li{padding:6px 0 6px 38px;position:relative}
+.ogrid li::before{content:"✓";position:absolute;left:0;top:5px;width:26px;height:26px;border-radius:50%;background:var(--green);color:var(--lime);display:grid;place-items:center;font-size:.9rem;font-weight:800}
+.price{background:#fff;border:4px solid var(--green);border-radius:36px;padding:34px;box-shadow:10px 10px 0 var(--green);text-align:center;transform:rotate(-2deg)}
+.price .n{font-weight:800;font-size:clamp(4rem,10vw,6.5rem);letter-spacing:-.05em;line-height:1}
+@media (max-width:860px){.ogrid{grid-template-columns:1fr}.price{transform:none}}
+/* faq */
+.fgrid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px}
+.fit{background:var(--sand);border-radius:36px;padding:34px;align-self:start}
+.note{font-size:.95rem;font-weight:600;opacity:.75}
+details{border-radius:24px;background:#f0f3fc;padding:20px 26px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:800;font-size:1.2rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1;transition:rotate .2s}
+details[open] summary::after{rotate:45deg}
+details[open]{background:var(--lime)}
+details p{margin:12px 0 0;font-weight:600}
+@media (max-width:860px){.fgrid{grid-template-columns:1fr}}
+.cta{text-align:center}.cta h2{margin-inline:auto;max-width:14ch}.cta .btn{margin:6px}
+footer{background:var(--green);color:#d3dcff;border-radius:56px 56px 0 0;padding:50px 0 40px;overflow:hidden}
+footer .big{font-weight:800;color:var(--lime);font-size:clamp(3.5rem,17vw,13rem);letter-spacing:-.06em;line-height:.85;margin:30px 0 20px}
+footer .links{display:flex;gap:20px;flex-wrap:wrap;font-weight:600}
+footer a{color:var(--yellow)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="top" aria-label="Main">
+      <div class="logo">YourBrand</div>
+      <div class="links"><a href="#use">Use cases</a><a href="#save">Savings</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
+      <a class="btn sm" href="#buy">Buy now</a>
+    </nav>
+    <div class="grid">
+      <div>
+        <h1>Your home internet. Anywhere.</h1>
+        <p class="lead">Two plug-and-play routers that keep your home IP address with you across Europe. No software, no subscription.</p>
+        <a class="btn" href="#buy">Get YourBrand</a> <a class="btn ghost" href="#how">How it works</a>
+        <div class="stats"><span>⭐ [4.8] rating</span><span>↩ [30]-day returns</span><span>🚚 Tracked EU shipping</span></div>
+      </div>
+      <div class="stage" role="img" aria-label="Home unit and travel unit share the same IP address through an encrypted tunnel">
+        <span class="chip a">🏦 Bank login ✓</span><span class="chip c">📺 Streaming ✓</span><span class="chip b">🏠 Home NAS ✓</span>
+        <div class="devs"><div class="dev h">Home<small>at your router</small></div><div class="dash"></div><div class="dev t">Travel<small>in your bag</small></div></div>
+        <div class="ip">203.0.113.24 = 203.0.113.24</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+Lisbon<i>✺</i>Tenerife<i>✺</i>Split<i>✺</i>Tallinn<i>✺</i>Valencia<i>✺</i>Athens<i>✺</i>Madeira<i>✺</i>Budapest<i>✺</i>Tbilisi<i>✺</i>Malta<i>✺</i>Lisbon<i>✺</i>Tenerife<i>✺</i>Split<i>✺</i>Tallinn<i>✺</i>Valencia<i>✺</i>Athens<i>✺</i>Madeira<i>✺</i>Budapest<i>✺</i>Tbilisi<i>✺</i>Malta<i>✺</i>
+</div></div>
+
+<main>
+<section id="use"><div class="wrap">
+  <div class="head"><h2>Work from the beach. Feel at home.</h2><p>Six everyday problems, solved by one small box.</p></div>
+  <div class="bento">
+    <div class="cell s4" style="background:var(--teal)"><span class="ico">🏦</span><div><h3>Banking that just works</h3><p>Your bank sees you in your home country, so no more blocked logins or surprise checks.</p></div></div>
+    <div class="cell s2" style="background:var(--lime)"><span class="ico">📺</span><div><h3>Your streaming back</h3><p>Home catalogues and local portals.</p></div></div>
+    <div class="cell s2" style="background:var(--coral)"><span class="ico">🏠</span><div><h3>Reach home devices</h3><p>NAS, printer, cameras, smart home.</p></div></div>
+    <div class="cell s2" style="background:var(--yellow)"><span class="ico">📶</span><div><h3>Any connection</h3><p>Hotel Wi-Fi, cable or phone hotspot.</p></div></div>
+    <div class="cell s2" style="background:var(--sand)"><span class="ico">🔒</span><div><h3>Safe on public Wi-Fi</h3><p>Everything goes through your encrypted tunnel.</p></div></div>
+    <div class="cell s6" style="background:var(--green);color:#fff"><span class="ico">🔌</span><div><h3>Nothing to install</h3><p>It behaves like any Wi-Fi router, and your employer's VPN runs on top. Always follow your company's remote-work rules.</p></div></div>
+  </div>
+</div></section>
+
+<section class="calc" id="save"><div class="wrap">
+  <div class="head"><h2>Do the maths.</h2><p>Change the numbers to match your plan. Subscriptions add up, hardware is paid once.</p></div>
+  <div class="cgrid">
+    <div class="panel">
+      <label for="p">Price of YourBrand (€)</label><input id="p" type="number" min="0" value="149">
+      <label for="m">Your VPN subscription (€ / month)</label><input id="m" type="number" min="0" value="9">
+      <label for="y">Years of use: <span id="yl">3</span></label><input id="y" type="range" min="1" max="5" value="3">
+    </div>
+    <div class="out">
+      <div class="row"><span>VPN subscription total</span><b id="vpn"></b></div>
+      <div class="row"><span>YourBrand, one time</span><b id="mine"></b></div>
+      <div class="big" id="save-out"><span id="save"></span></div>
+      <small>you keep over the period (illustrative)</small>
+    </div>
+  </div>
+</div></section>
+
+<section id="compare"><div class="wrap">
+  <div class="head"><h2>Why not just a VPN?</h2><p>A consumer VPN rents you a shared address. This gives you your own.</p></div>
+  <div class="tw"><table>
+    <thead><tr><th></th><th>Consumer VPN</th><th>YourBrand</th></tr></thead>
+    <tbody>
+      <tr><td>IP address</td><td class="no">Shared with thousands</td><td>Your own home IP</td></tr>
+      <tr><td>Software on laptop</td><td class="no">Required</td><td>None</td></tr>
+      <tr><td>Reach home devices</td><td class="no">No</td><td>Yes</td></tr>
+      <tr><td>Often blocked by banks</td><td class="no">Frequently</td><td>Rarely</td></tr>
+      <tr><td>Billing</td><td class="no">Monthly</td><td>One-time</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="how" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>Three steps. Zero setup headaches.</h2></div>
+  <div class="steps">
+    <div class="step" style="background:var(--yellow)"><b>1</b><h3>Plug in the home unit</h3><p>One cable to your router. It stays on at home.</p></div>
+    <div class="step" style="background:var(--teal)"><b>2</b><h3>Pack the travel unit</h3><p>Hotel Wi-Fi, a socket or your hotspot. It builds the tunnel itself.</p></div>
+    <div class="step" style="background:var(--coral)"><b>3</b><h3>Join its Wi-Fi</h3><p>Connect your laptop like to any router. Several devices at once.</p></div>
+  </div>
+</div></section>
+
+<section class="offer" id="buy"><div class="wrap ogrid">
+  <div>
+    <h2>Everything is in the box.</h2>
+    <ul>
+      <li>Home and travel units, pre-paired</li>
+      <li>EU, UK and CH power adapters and cables</li>
+      <li>Setup guide and support from unboxing</li>
+      <li>No subscription, no renewal</li>
+      <li>[30]-day returns on top of your legal rights</li>
+    </ul>
+  </div>
+  <div class="price"><div class="n">€[XXX]</div><p style="margin:8px auto 22px">One-time payment, VAT included.</p><a class="btn" href="#">Add to cart</a></div>
+</div></section>
+
+<section id="faq"><div class="wrap fgrid">
+  <div class="fit">
+    <h3>Will it work with my router?</h3>
+    <p style="margin-top:14px;font-weight:600">You need an ADSL or fibre line with a public IPv4 address. 4G/5G and satellite home connections often don't have one, so ask us first.</p>
+    <p class="note">Add real customer reviews here once you have them.</p>
+  </div>
+  <div>
+    <h2 style="font-size:clamp(2rem,5vw,3.4rem)">Questions</h2>
+    <details><summary>Is it hard to set up?</summary><p>No. Plug in the home unit, power on the travel unit and they pair automatically.</p></details>
+    <details><summary>Do I install anything on my computer?</summary><p>No. You just join the travel unit's Wi-Fi.</p></details>
+    <details><summary>Does it work with my employer's VPN?</summary><p>Yes, it runs on top. Check your employer's policy on working abroad before you travel.</p></details>
+    <details><summary>Which countries work?</summary><p>Home and travel can be anywhere, except places that heavily filter traffic. [List exclusions.]</p></details>
+    <details><summary>Is there a subscription?</summary><p>No. You pay once for the hardware.</p></details>
+    <details><summary>What if it doesn't suit me?</summary><p>Send it back within [30] days for a refund.</p></details>
+  </div>
+</div></section>
+
+<section class="cta" style="padding-top:20px"><div class="wrap">
+  <h2>Your home comes with you.</h2>
+  <a class="btn" href="#buy">Get YourBrand</a><a class="btn ghost" href="#">Contact us</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Refunds</a><a href="#">Shipping</a><a href="#">Contact</a></div>
+  <div class="big" aria-hidden="true">YourBrand</div>
+  <div>© 2026 YourBrand. Add your company name, address and VAT number.</div>
+</div></footer>
+<script>
+const $=i=>document.getElementById(i);
+function calc(){const p=+$('p').value||0,m=+$('m').value||0,y=+$('y').value;$('yl').textContent=y;const v=m*12*y;$('vpn').textContent='€'+Math.round(v);$('mine').textContent='€'+Math.round(p);$('save').textContent='€'+Math.max(0,Math.round(v-p));}
+['p','m','y'].forEach(i=>$(i).addEventListener('input',calc));calc();
+</script>
+</body>
+</html>
